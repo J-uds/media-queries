@@ -14,7 +14,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--color-green);
     text-align: center;
 }
 
@@ -27,7 +26,7 @@ body {
 }
 
 header, main, footer {
-    width: 90vh;
+    width: 100vw;
     background-color: var(--color-black);
     padding: 1em;
     margin-bottom: 1em;
@@ -80,3 +79,27 @@ article, textarea, aside p {
 footer form {
     background-color: var(--color-yellow);
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar-header {
+        display: flex;
+        background-color: var(--color-green);
+        flex-direction: row;
+        gap: 1em;
+    }
+
+    .logo, .register-btn, .navbar-list {
+        flex-grow: 1;
+        width: auto;
+    }
+
+    .navbar-list {
+        flex-grow: 4;
+        margin: 0;
+    }
+}
+
+@media (min-width: 1025px) {
+  
+    
+  }
