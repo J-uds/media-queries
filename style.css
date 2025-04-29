@@ -55,7 +55,7 @@ nav, section {
     padding: 1em;
 }
 
-section, aside, form{
+section, div, aside, form{
     background-color: var(--color-red);
     display: flex;
     flex-direction: column;
@@ -64,7 +64,7 @@ section, aside, form{
     padding: 1em;
 }
 
-.article-section, .comment-form {
+div, .article-section, .comment-form {
     padding: 0;
 }
 
@@ -76,11 +76,19 @@ article, textarea, aside p {
     text-align: center;
 }
 
+p {
+    margin-top: 0;
+}
+
+#comment2, #option2{
+    margin-bottom: 0;
+}
+
 footer form {
     background-color: var(--color-yellow);
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) /* and (max-width: 1024px) */ {
     .navbar-header {
         display: flex;
         background-color: var(--color-green);
@@ -89,17 +97,36 @@ footer form {
     }
 
     .logo, .register-btn, .navbar-list {
+        display: flex;
         flex-grow: 1;
-        width: auto;
+        flex-basis: 0;
+        min-width: auto;
+        justify-content: center;
     }
 
     .navbar-list {
         flex-grow: 4;
         margin: 0;
     }
+
+    div {
+        flex-direction: row;
+        gap: 1em;
+    }
+
+    div, section, form {
+        background-color: var(--color-green);
+    }
 }
 
 @media (min-width: 1025px) {
-  
-    
+    main {
+        flex-direction: row;
+        gap: 1em;
+        align-items: stretch;
+    }
+
+    main > section {
+        margin-bottom: 0;
+    }
   }
