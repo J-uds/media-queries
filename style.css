@@ -68,7 +68,7 @@ div, .article-section, .comment-form {
     padding: 0;
 }
 
-article, textarea, aside p {
+article, textarea, aside > p {
     background-color: var(--color-yellow);
     width: 100%;
     padding: 1em;
@@ -88,7 +88,7 @@ footer form {
     background-color: var(--color-yellow);
 }
 
-@media (min-width: 768px) /* and (max-width: 1024px) */ {
+@media (min-width: 768px) {
     .navbar-header {
         display: flex;
         background-color: var(--color-green);
